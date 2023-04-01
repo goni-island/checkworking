@@ -1,0 +1,188 @@
+#root{
+
+  --color-background : #5180FF;
+  --color-brick:#C07000;
+  --padding: 10px;
+  --margin:7px;
+  --size-radius: 6px;
+  --size-width: 60dvw;
+  --color-yellow: #FFD028;
+  --color-sky:#9DE7E7;
+  --color-green:#00CF00;
+  --color-red:#FF3939;
+  --color-text:#FFC8B8;
+  --margin-start-end: 15vh;
+}
+
+.App {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding:0;
+  margin : 0;
+}
+
+.App-header {
+  width:var(--size-width);
+  font-size: 6vw;
+  font-weight: bolder;
+  color: black;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  background-color:var(--color-brick);
+  border-radius: var(--size-radius);
+  border-style: groove ;
+  border-width: 4px;
+  border-color: black;
+  margin-top:var(--margin-start-end);
+  background-color: var(--color-brick);
+}
+
+.btnScr{
+  width:var(--size-width);
+  height : 50%;
+  border-radius: var(--size-radius);
+  /* border-width: 4px;
+  border-style:double;
+  border: 2px; */
+  border-color: #96C0FF;
+  margin-top: var(--margin); 
+  display: flex;
+  margin-bottom: var(--margin);
+  justify-content: center;
+  flex-direction: row;
+}
+
+.btn,
+.turn {
+  margin-left: var(--margin);
+  border-radius: var(--size-radius);
+  /* margin-top:var(--margin); */
+  /* margin-bottom:var(--margin); */
+  width: calc(var(--size-width)/2);
+  font-weight: bold;
+  /* border-style: groove ; */
+  border-color: black;
+  margin-right: var(--margin);
+  display: flex;
+}
+
+.turn{
+text-align:left;
+justify-content: center;
+flex-direction: column;
+padding-left:var(--padding);
+border-style: groove ;
+border-color: black;
+font-size: initial;
+}
+
+.btnIn{
+  margin-left: var(--margin);
+  border-radius: var(--size-radius);
+  cursor: pointer;  
+  width: 100%;
+  font-weight: bold;
+  border-style: groove ;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  padding : 7px;
+  
+}
+
+.gridScreen{
+  position:flex;
+  width:var(--size-width);
+  height:  calc(var(--size-width)*0.75);
+  display: grid;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  /* text-align: center; */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* border :1px solid black; */
+  margin-bottom:var(--margin-start-end);
+  margin-top:var(--margin);
+  gap : 10px;
+}
+
+
+.row{
+  display:flex;
+  width:100%;
+  height:100%;
+  /* border :1px solid black; */
+}
+.col{
+  border :1px solid black;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;  
+  border-radius: var(--size-radius);
+  border-style: groove ;
+  border-color: black;
+  border-width: 4px;
+}
+
+.card{
+  width:90%;
+  height: 90%
+}
+
+.col:hover{
+
+  transition: 500ms ;
+
+}
+.up {
+  transform: rotateY(360deg);
+  background-color: violet;
+}
+.down{
+  transform: rotateY(360deg);
+  background-color: white;
+}
+
+/* .front{
+  width:100%;
+  height: 100%;
+  background-color:violet;
+}
+*/
+
+.BtnRow3{
+  background-color: var(--color-sky);
+
+}
+.BtnRow4{
+  background-color: var(--color-yellow);
+  
+}
+.BtnRow5{
+  background-color: var(--color-sky);
+
+}
+.BtnRow6{
+  background-color: var(--color-green);
+}
+
+.BtnNG{
+  background-color: var(--color-red);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
